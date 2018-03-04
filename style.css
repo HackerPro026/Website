@@ -1,0 +1,19 @@
+.title {
+    color:rgb(0, 0, 0);
+}
+html {
+    background: radial-gradient(circle, rgb(21, 255, 0), rgb(250, 0, 0));
+}
+input {
+    width: 50%;
+    display: block;
+    margin: auto;
+    background:rgba(94, 94, 94, 0.61);
+    border: hidden;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+button {
+    color: royalblue;
+    background: radial-gradient(circle, red, black);
+}
