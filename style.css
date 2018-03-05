@@ -17,3 +17,9 @@ button {
     color: royalblue;
     background: radial-gradient(circle, red, black);
 }
+
+img {
+    width: 500px;
+    height: 500px;
+
+}
