@@ -1,6 +1,6 @@
 
 
 function alert2() {
-    var firstName = document.querySelector("#first-name").value;
-    alert(firstName);
+    var encode = document.querySelector("#first-name").value;
+    alert(encode);
 }
