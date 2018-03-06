@@ -79,7 +79,7 @@ function check(turn, board){
 	}
 }
 for(var i = 1; i < 10; i++){ //main loop
-	var x = prompt(board[0] +" " + board[1] + " " + board[2] +"\n"+ board[3] + " "+ board[4]+ " "+board[5]
+	var x = prompt("Tic Tac Toe: \n" + board[0] +" " + board[1] + " " + board[2] +"\n"+ board[3] + " "+ board[4]+ " "+board[5]
 + "\n"+ board[6] + " "+ board[7]+ " "+board[8] + "\n choose a number");
 	board = move(x, turn,board);
 	var z = check(turn, board);
