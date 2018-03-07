@@ -4,7 +4,7 @@ function alert2() {
     var encode = document.querySelector("#first-name").value;
     alert(encode);
 }
- function startGame() {
+ function startGame1() {
     var turn = 1;
 var board = ["1","2","3","4","5","6","7","8","9"];
 
@@ -106,3 +106,127 @@ for(var i = 1; i < 10; i++){ //main loop
 
 
  }
+ function startGame2() {
+	var rules = {
+		"rock" : "scissors",
+		"paper" : "rock",
+		"scissors" : "paper"
+	  };
+	  
+	  
+	  function getPlayerChoice() {
+		var playerChoice = prompt("Rock, paper, or scissors \nChoice:");
+		 playerChoice =  playerChoice.toLowerCase();
+	  
+	   if(Object.keys(rules).includes(playerChoice)){
+		return playerChoice;
+		 
+	   }
+	   alert("try again!");
+	   return getPlayerChoice();
+	  
+		
+	  }
+	  
+	  function getComputerChoice() {
+	  var choices = Object.keys(rules);
+	  var len = choices.length;
+	  var idx = Math.floor(Math.random() * len);
+	  return choices[idx];
+	  
+	  
+	  }
+	  
+	  function compare(player, computer) {
+		if(player == computer){
+		  return 'tie';
+		}else if(rules[player] == computer){
+		return 'win';    
+		}else if(rules[computer] == player){
+		  return 'lose';
+		}
+		
+	  }
+		var score = {
+		  wins: 0,
+		  losses: 0,
+		  ties: 0
+	  }; 
+	  function game(){
+		  var playing = true;
+		while(playing == true){
+		  var playerC = getPlayerChoice();
+		  var computerC = getComputerChoice();
+		  var result = compare(playerC, computerC); 
+		  alert(result);
+		  done = prompt("want to play again?").toLowerCase();
+		if(playing == 'yes'){
+		 playing = true;
+		} else if(playing == 'no'){
+		  playing = false;
+		  break;
+		}
+		
+	  }
+	  if(result == 'win'){
+		score.wins++;
+	  }else if(result == 'lose'){
+		score.losses++;
+	  }else if(result == 'tie'){
+		score.ties++;
+	  } else {
+		console.log(Error)
+	  }
+	   alert("Wins: " + score.wins + "\nLosses: " + score.losses + "\nTies: " + score.ties);
+	  console.log("done");
+	  }
+	  game();
+	  
+	  
+	  
+ }
+ function startGame3() {
+	var msg = prompt("What is your message?");
+	var alpha = "abcdefghijklmnopqrstuvwxyz !@#$%^&*()+={}[]:;\"'<>,.?/_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var scramble = "mnopqrstuvwxyzabcdefghijkl_/?.,><'\";:][}{=+)(*&^%$#@! MNOPQRSTUVWXYZABCDEFGHIJKL";
+	var encoded = "";
+	for(var i = 0; i < (msg.length); i++){
+	  var y = msg[i];
+	  var x = alpha.indexOf(y);
+	  encoded = encoded + scramble[x];
+	
+	}
+	alert(encoded);
+ }
+ function startGame3() {
+	var method = prompt("Put in a operation:");
+	var input1 = prompt("First Number:");
+	var input2 = prompt("Second Number:");
+	input1 = parseFloat(input1);
+	input2 = parseFloat(input2);
+	
+	if(method == "+"){
+	  alert(input1 + input2); 
+	}else if(method == "-"){
+	  alert(input1 - input2);
+	}else if(method == "x"){
+	  alert(input1 - input2);
+	}else if(method == "/"){
+	  alert(input1 / input2);
+	}else if(method == "÷"){
+	  alert(input1 / input2)
+	}
+ }
+
+ function startGame4() {
+	function randomizor() {
+		return Math.floor(Math.random() * 100);
+	} 
+	w = randomizor(); 
+	var input = prompt("Guess me number (0 - 100)"); 
+	if (input == w) {
+		alert("Correct! You bested the computer")
+	}else{
+		alert("Wrong!")} alert("This was the awnser: " + w);
+ }
+ 
