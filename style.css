@@ -16,6 +16,7 @@ input {
 button {
     color: royalblue;
     background: radial-gradient(circle, red, black);
+    display: line;
 }
 
 img {

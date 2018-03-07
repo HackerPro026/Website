@@ -198,7 +198,7 @@ for(var i = 1; i < 10; i++){ //main loop
 	}
 	alert(encoded);
  }
- function startGame3() {
+ function startGame4() {
 	var method = prompt("Put in a operation:");
 	var input1 = prompt("First Number:");
 	var input2 = prompt("Second Number:");
@@ -218,7 +218,7 @@ for(var i = 1; i < 10; i++){ //main loop
 	}
  }
 
- function startGame4() {
+ function startGame5() {
 	function randomizor() {
 		return Math.floor(Math.random() * 100);
 	} 
